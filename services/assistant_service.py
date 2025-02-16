@@ -8,9 +8,7 @@ class AssistantService:
     
     def __init__(self):
         """Initialize OpenAI client and create necessary resources."""
-        self.openAI = OpenAI( api_key='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',
-                              organization='org-GcXWSgApYhAZch5rdR0hrSpj',
-                              project='proj_TrKk1c2GU2HBY3dO9vjR1nHW')
+        self.openAI = OpenAI( api_key=Config.OPENAI_KEY)
         self.assistant_id = Config.ASSISTANT_ID
         self.assistant = self.get_assistant()
         self.thread = self.get_or_create_thread()
